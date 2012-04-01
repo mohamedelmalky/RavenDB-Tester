@@ -21,5 +21,10 @@ namespace RavenDB_Tester.Controllers
 
             return View();
         }
+
+        public ActionResult Users()
+        {
+
+        }
     }
 }
