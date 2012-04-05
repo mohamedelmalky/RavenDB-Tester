@@ -24,7 +24,7 @@ namespace RavenDB_Tester.Controllers
 
         public ActionResult Users()
         {
-
+            return RedirectToAction("Index", "User");
         }
     }
 }

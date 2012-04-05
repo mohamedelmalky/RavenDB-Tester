@@ -1,0 +1,20 @@
+﻿@model List<RavenDB_Tester.Models.UserInfo>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<ul>
+    <li>@Html.ActionLink("Add User", "AddUser", "User")</li>
+</ul>
+
+<ul>
+    @foreach (var user in Model)
+    {
+        <li>
+        @{Html.RenderPartial("ViewUser", user);}
+        </li>
+    }
+</ul>

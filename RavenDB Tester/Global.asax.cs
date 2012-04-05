@@ -37,7 +37,7 @@ namespace RavenDB_Tester
 
         protected void Application_Start()
         {
-            Store = new DocumentStore() { Url = ConfigurationManager.ConnectionStrings["RavenDB"].ConnectionString };
+            Store = new DocumentStore() { ConnectionStringName = "RavenDB" };
             Store.Initialize();
             IndexCreation.CreateIndexes(Assembly.GetCallingAssembly(), Store);
 
