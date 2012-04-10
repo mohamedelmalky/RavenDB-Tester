@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Raven.Client;
 
-namespace RavenDB_Tester.Controllers
+namespace RavenDB.Controllers
 {
     public abstract class RavenController : Controller
     {

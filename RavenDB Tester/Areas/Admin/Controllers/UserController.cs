@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using RavenDB_Tester.Models;
+using RavenDB.Models;
+using RavenDB.Controllers;
 
-namespace RavenDB_Tester.Controllers
+namespace RavenDB.Areas.Admin.Controllers
 {
     public class UserController : RavenController
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel;
 
-namespace RavenDB_Tester.Models
+namespace RavenDB.Models
 {
     public class UserInfo
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace RavenDB_Tester.Models
+namespace RavenDB.Models
 {
     public class Item
     {

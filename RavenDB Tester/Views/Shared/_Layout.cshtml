@@ -21,13 +21,26 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Users", "Index", "User")</li>
+                    <li>@Html.ActionLink("Inventory", "Index", "Inventory")</li>
                 </ul>
             </nav>
         </header>
+
         <section id="main">
-            @RenderBody()
+            @if (IsSectionDefined("SideBar"))
+            {
+                <section id="sidebar">
+                    @RenderSection("SideBar", required: false)
+                </section>
+            }
+            <section id="content">
+                @RenderBody()
+            </section>
+            <br class="clear" />
         </section>
+
         <footer>
+            MyFooter
         </footer>
     </div>
 </body>

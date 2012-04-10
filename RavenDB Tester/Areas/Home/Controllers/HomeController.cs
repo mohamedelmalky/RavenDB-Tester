@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace RavenDB_Tester.Controllers
+namespace RavenDB.Controllers
 {
     public class HomeController : RavenController
     {

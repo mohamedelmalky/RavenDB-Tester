@@ -1,0 +1,9 @@
+﻿@model IEnumerable<RavenDB.Models.MenuItem>
+
+<ul>
+    @foreach (var item in Model) {
+    <li>
+        @Html.ActionLink(item.DisplayName, item.Action, item.Controller)
+    </li>
+    }
+</ul>

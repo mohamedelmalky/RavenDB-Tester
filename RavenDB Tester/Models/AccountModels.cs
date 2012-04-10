@@ -5,7 +5,7 @@ using System.Globalization;
 using System.Web.Mvc;
 using System.Web.Security;
 
-namespace RavenDB_Tester.Models
+namespace RavenDB.Models
 {
 
     public class ChangePasswordModel
