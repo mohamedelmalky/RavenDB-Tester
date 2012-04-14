@@ -15,10 +15,14 @@ namespace RavenDB.Areas.Inventory
         public override void RegisterArea(AreaRegistrationContext context)
         {
             context.MapRoute(
-                "Inventory_default",
-                "Inventory/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
-            );
+            "Inventory_default",
+            "Inventory/{controller}/{action}/{id}",
+            new { action = "Index", id = UrlParameter.Optional });
+
+            context.MapRoute(
+                "Inventory",
+                "Inventory",
+                new { controller = "Inventory", action = "Index" }, new[] { "RavenDB.Areas.Inventory.Controllers" });
         }
     }
 }

@@ -19,6 +19,11 @@ namespace RavenDB.Areas.Admin
                 "Admin/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional }
             );
+
+            context.MapRoute(
+            "Admin",
+            "Admin",
+            new { controller = "Admin", action = "Index" }, new[] { "RavenDB.Areas.Admin.Controllers" });
         }
     }
 }

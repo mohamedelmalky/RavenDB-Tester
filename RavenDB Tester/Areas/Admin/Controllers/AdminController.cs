@@ -4,16 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using RavenDB.Models;
+using RavenDB.Controllers;
 
 namespace RavenDB.Areas.Admin.Controllers
 {
-    public class AdminController : Controller
+    public class AdminController : RavenController
     {
         public ActionResult Index()
         {
-            List<MenuItem> menuItems = new List<MenuItem>();
-            menuItems.Add(new MenuItem() { DisplayName = "Users", Action = "Index", Controller = "User" });
-            return PartialView("Render", menuItems);
+            return View();
         }
     }
 }

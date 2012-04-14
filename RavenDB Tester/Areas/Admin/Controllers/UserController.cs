@@ -11,6 +11,13 @@ namespace RavenDB.Areas.Admin.Controllers
     public class UserController : RavenController
     {
         [HttpGet]
+        public ActionResult Index()
+        {
+            var users = RavenSession.Query<UserInfo>().ToList<UserInfo>();
+            return View(users);
+        }
+
+        [HttpGet]
         public ActionResult AddUser()
         {
             return View();
@@ -23,11 +30,7 @@ namespace RavenDB.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult Index()
-        {
-            var users = RavenSession.Query<UserInfo>().ToList<UserInfo>();
-            return View(users);
-        }
+
 
     }
 }

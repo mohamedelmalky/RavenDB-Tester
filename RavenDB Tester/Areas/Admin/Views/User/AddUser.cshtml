@@ -1,4 +1,9 @@
-﻿@model RavenDB.Models.UserInfo
+﻿@{
+    ViewBag.Title = "Add User";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model RavenDB.Models.UserInfo
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
